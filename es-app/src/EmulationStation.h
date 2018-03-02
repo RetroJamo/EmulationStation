@@ -7,7 +7,7 @@
 #define PROGRAM_VERSION_MAJOR       2
 #define PROGRAM_VERSION_MINOR        7
 #define PROGRAM_VERSION_MAINTENANCE  4
-#define PROGRAM_VERSION_STRING "2.7.4rp - ROPi 4.1"
+#define PROGRAM_VERSION_STRING "RetroStation"
 
 #define PROGRAM_BUILT_STRING __DATE__ " - " __TIME__
 

@@ -17,7 +17,7 @@
 #include "VolumeControl.h"
 #include <SDL_events.h>
 
-GuiMenu::GuiMenu(Window* window) : GuiComponent(window), mMenu(window, "ROPi 4.1 MENU"), mVersion(window)
+GuiMenu::GuiMenu(Window* window) : GuiComponent(window), mMenu(window, "RetroStation MENU"), mVersion(window)
 {
 	bool isFullUI = UIModeController::getInstance()->isUIModeFull();
 
@@ -423,8 +423,7 @@ void GuiMenu::openQuitMenu()
 	Window* window = mWindow;
 
 	ComponentListRow row;
-	if (UIModeController::getInstance()->isUIModeFull())
-	{
+
         row.elements.clear();
         row.makeAcceptInputHandler([window] {
                 window->pushGui(new GuiMsgBox(window, "REALLY QUIT?", "YES",
@@ -453,7 +452,7 @@ void GuiMenu::openQuitMenu()
         s->addRow(row);
                 }
 
-	}
+	
         row.elements.clear();
                 row.makeAcceptInputHandler([window] {
                         window->pushGui(new GuiMsgBox(window, "REALLY RESTART?", "YES",
